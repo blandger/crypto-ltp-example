@@ -3,6 +3,7 @@ use actix_web::http::StatusCode;
 use actix_web::web::Json;
 use crate::models::ltp_response::LtpListResponse;
 
+/// Route to get Last Time Price assets
 #[get("/ltp")]
 async fn get_ltp() -> HttpResponse {
 
