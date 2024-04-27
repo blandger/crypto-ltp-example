@@ -1,1 +1,2 @@
-pub mod ltp_response;
+pub mod response;
+pub mod kraken_trade;
