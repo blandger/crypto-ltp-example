@@ -44,4 +44,12 @@ Deployed application API is accessible by URL: http://127.0.0.1:8080/api/v1/ltp
 
 failed to run custom build command for `openssl-sys v0.9.102`
 
-The possible solution to build 'openssl' library is available [by a link](https://github.com/sfackler/rust-openssl/issues/1086#issue-422065024) 
+The possible solution to build 'openssl' library is available [by a link](https://github.com/sfackler/rust-openssl/issues/1086#issue-422065024)
+
+### Other possible errors
+
+If you see below error in running docker container
+```
+ERROR crypto_ltp_example::routes::last_trade_price] Not fetched pair = "BTC/USD" due to error: Connect is failed: error sending request for url (https://api.kraken.com/0/public/Ticker?pair=BTCUSD)
+```
+There are number of reason possible that prevent internal container code to access external internet (firewall, network settings). There is not one solution for all OS and situations.
