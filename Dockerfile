@@ -4,7 +4,10 @@ WORKDIR /usr/src/app
 
 RUN rustup target add x86_64-unknown-linux-musl
 
-RUN apt update && apt install -y musl-tools musl-dev
+RUN apt update && apt install -y build-essential musl-tools musl-dev libssl-dev
+RUN apt install pkg-config
+RUN OPENSSL_LIB_DIR="/usr/lib/x86_64-linux-gnu"
+RUN OPENSSL_INCLUDE_DIR="/usr/include/openssl"
 
 COPY Cargo.toml Cargo.lock ./
 COPY src src
