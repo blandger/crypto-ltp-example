@@ -52,4 +52,4 @@ If you see below error in running docker container
 ```
 ERROR crypto_ltp_example::routes::last_trade_price] Not fetched pair = "BTC/USD" due to error: Connect is failed: error sending request for url (https://api.kraken.com/0/public/Ticker?pair=BTCUSD)
 ```
-There are number of reason possible that prevent internal container code to access external internet (firewall, network settings). There is not one solution for all OS and situations.
+There are number of reasons possible that prevent internal container code to access external internet (firewall, network settings). There is no one solution for all OS and situations, sorry.
