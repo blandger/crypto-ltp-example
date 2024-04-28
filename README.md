@@ -30,3 +30,10 @@ See how to install it [from Docker guide/doc](https://docs.docker.com/engine/ins
 ## Testing REST API
 Deployed application API is accessible by URL: http://127.0.0.1:8080/api/v1/ltp
 
+## Possible compile errors
+
+### Windows 10
+
+failed to run custom build command for `openssl-sys v0.9.102`
+
+The possible solution to build 'openssl' library is available [by a link](https://github.com/sfackler/rust-openssl/issues/1086#issue-422065024) 
