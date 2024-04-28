@@ -22,10 +22,18 @@ See how to install it [from Docker guide/doc](https://docs.docker.com/engine/ins
 ## Build docker image
 
 > docker build -t crypto-ltp-example:v1 .
+docker build --no-cache --progress plain -t crypto-ltp-example:v1 .
+docker build --no-cache --platform linux/amd64 -t crypto-ltp-example:v1 .
 
 ## Run docker image
 
-> docker run -p 8080:8080 crypto-ltp-example:v1
+> docker network create --driver bridge mynetwork
+
+> docker run -p 8080:8080 -it --network mynetwork crypto-ltp-example:v1
+
+OR
+
+> docker run -p 8080:8080 -it --net=host crypto-ltp-example:v1
 
 ## Testing REST API
 Deployed application API is accessible by URL: http://127.0.0.1:8080/api/v1/ltp
