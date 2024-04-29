@@ -22,8 +22,9 @@ See how to install it [from Docker guide/doc](https://docs.docker.com/engine/ins
 ## Build docker image
 
 > docker build -t crypto-ltp-example:v1 .
-docker build --no-cache --progress plain -t crypto-ltp-example:v1 .
-docker build --no-cache --platform linux/amd64 -t crypto-ltp-example:v1 .
+
+> docker build --no-cache -t crypto-ltp-example:v1 .
+
 
 ## Run docker image
 
